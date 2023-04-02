@@ -39,7 +39,9 @@ class HorizontalMovingChipsFragment : Fragment(R.layout.fragment_horizontal_movi
         }
     }
 
-    private val items = (1..10).map { "Text $it" }.toMutableList()
+    private val items = listOf(
+        "HTML", "CSS", "Java", "C#", "Javascript", "jQuery", "Kotlin", "Python", "Node JS"
+    )
 
     private val scope = CoroutineScope(Dispatchers.Main)
 
@@ -64,7 +66,7 @@ class HorizontalMovingChipsFragment : Fragment(R.layout.fragment_horizontal_movi
 
             val layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, reversed)
             recyclerView.layoutManager = layoutManager
-            adapter.submitItems(items)
+            adapter.submitItems(items.shuffled())
             scope.launch {
                 while (true) {
                     recyclerView.scrollBy(scrollPx, 0)
