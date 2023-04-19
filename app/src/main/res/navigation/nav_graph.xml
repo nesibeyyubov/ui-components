@@ -20,4 +20,9 @@
         android:name="com.example.instavideos.fragments.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/likeButtonAnimationFragment"
+        android:name="com.example.instavideos.fragments.LikeButtonAnimationFragment"
+        android:label="LikeButtonAnimationFragment"
+        tools:layout="@layout/fragment_like_button_animation" />
 </navigation>
