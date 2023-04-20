@@ -1,15 +1,12 @@
 package com.example.instavideos.fragments
 
 import android.animation.ValueAnimator
-import android.content.Context
 import android.content.res.Resources
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.view.animation.AccelerateInterpolator
-import android.view.animation.Animation
 import android.view.animation.BounceInterpolator
+import android.view.animation.DecelerateInterpolator
 import android.view.animation.LinearInterpolator
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -108,12 +105,12 @@ class LikeButtonAnimationFragment : Fragment(R.layout.fragment_like_button_anima
     }
 
     private fun startCountAnimation(fromBottom: Boolean = true) = with(binding) {
-        val animator = if (fromBottom) ValueAnimator.ofFloat(30f, 0f) else ValueAnimator.ofFloat(-30f, 0f)
-        animator.setDuration(COMPONENT_DURATION)
+        val animator = if (fromBottom) ValueAnimator.ofFloat(50f, 0f) else ValueAnimator.ofFloat(-50f, 0f)
+        animator.setDuration(if (fromBottom) COMPONENT_DURATION else COMPONENT_DURATION + 100)
 
         var textChanged = false
 
-        animator.interpolator = LinearInterpolator()
+        animator.interpolator = DecelerateInterpolator()
         animator.addUpdateListener {
             if (!textChanged) {
                 binding.tvLikeCount.text = if (fromBottom) "25" else "24"
@@ -138,7 +135,7 @@ class LikeButtonAnimationFragment : Fragment(R.layout.fragment_like_button_anima
 
         val slideAnimator = ValueAnimator
             .ofInt(this.width, toWidth)
-            .setDuration(500)
+            .setDuration(500 + 200)
 
         slideAnimator.addUpdateListener { animation1: ValueAnimator ->
             val value = animation1.animatedValue as Int
