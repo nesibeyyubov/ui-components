@@ -47,7 +47,7 @@
             android:layout_width="1dp"
             android:layout_height="match_parent"
             android:layout_marginEnd="12dp"
-            android:background="#3B3B3B"
+            android:background="#3b3b3b"
             app:layout_constraintEnd_toStartOf="@id/tv_like_count" />
 
         <TextView
@@ -59,8 +59,8 @@
             android:text="24"
             android:textColor="#676767"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
