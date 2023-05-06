@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F4F4F4"
+        app:cardCornerRadius="120dp"
+        app:cardElevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/button_second_inner"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#F1F1F1"
+            app:cardCornerRadius="100dp"
+            app:cardElevation="20dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/stroke_white_border" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/button_first_inner"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="50dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:id="@+id/arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="12dp">
+
+                    <ImageView
+                        android:id="@+id/iv_arrow"
+                        android:layout_width="6dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/rounded_view_bg" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/stroke_circle"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:alpha="0"
+        android:elevation="130dp"
+        android:src="@drawable/stroke_light"
+        app:layout_constraintBottom_toBottomOf="@id/cardView"
+        app:layout_constraintEnd_toEndOf="@id/cardView"
+        app:layout_constraintStart_toStartOf="@id/cardView"
+        app:layout_constraintTop_toTopOf="@id/cardView" />
+
+    <!-- Icons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        android:paddingVertical="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView">
+
+        <ImageView
+            android:id="@+id/icon_1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:src="@drawable/ic_home_outlined"
+            android:translationY="-3dp"
+            app:tint="@color/gray" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/icon_4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:src="@drawable/ic_more_dots"
+            android:translationY="3dp"
+            app:tint="@color/gray" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        android:paddingVertical="10dp"
+        android:rotation="60"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView">
+
+        <ImageView
+            android:id="@+id/icon_2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:rotation="-60"
+            android:scaleType="centerCrop"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:src="@drawable/ic_search"
+            android:translationY="-3dp"
+            app:tint="@color/gray" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/icon_5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:rotation="-60"
+            android:scaleType="centerCrop"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:src="@drawable/ic_like"
+            android:translationY="3dp"
+            app:tint="@color/gray" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        android:paddingVertical="10dp"
+        android:rotation="120"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView">
+
+        <ImageView
+            android:id="@+id/icon_3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:rotation="-120"
+            android:scaleType="centerCrop"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:src="@drawable/ic_star_outlined"
+            android:translationY="-3dp"
+            app:tint="@color/gray" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/icon_6"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:rotation="-120"
+            android:scaleType="centerCrop"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:src="@drawable/ic_back"
+            android:translationY="3dp"
+            app:tint="@color/gray" />
+    </LinearLayout>
+
+
+    <!--  B L U R S  -->
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView">
+
+        <ImageView
+            android:id="@+id/blur_1"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:alpha="0"
+            android:background="@drawable/gradient_3"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/blur_4"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:alpha="0"
+            android:background="@drawable/gradient_5"
+            android:rotation="180"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        android:rotation="60"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView">
+
+        <ImageView
+            android:id="@+id/blur_2"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:alpha="0"
+            android:background="@drawable/gradient_6"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/blur_5"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:alpha="0"
+            android:background="@drawable/gradient_7"
+            android:rotation="180"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        android:rotation="120"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView">
+
+        <ImageView
+            android:id="@+id/blur_3"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:alpha="0"
+            android:background="@drawable/gradient_8"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/blur_6"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:alpha="0"
+            android:background="@drawable/gradient_9"
+            android:rotation="180"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

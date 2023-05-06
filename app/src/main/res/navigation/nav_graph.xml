@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/circularMenuFragment">
 
     <fragment
         android:id="@+id/animatedGradientBorderFragment"
@@ -25,4 +25,9 @@
         android:name="com.example.instavideos.fragments.LikeButtonAnimationFragment"
         android:label="LikeButtonAnimationFragment"
         tools:layout="@layout/fragment_like_button_animation" />
+    <fragment
+        android:id="@+id/circularMenuFragment"
+        android:name="com.example.instavideos.fragments.CircularMenuFragment"
+        android:label="CircularMenuFragment"
+        tools:layout="@layout/fragment_circular_menu" />
 </navigation>

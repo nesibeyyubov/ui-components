@@ -6,7 +6,10 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
+    <color name="gray">#A0A0A0</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="transparent">@android:color/transparent</color>
 
 
     <color name="gradient_color_1">#4e00c2</color>
@@ -15,4 +18,12 @@
 
 
     <color name="border_color">#535657</color>
+
+
+    <color name="gradient_1">#F5BA55</color>
+    <color name="gradient_4">#92FF00</color>
+    <color name="gradient_2">#641EDD</color>
+    <color name="gradient_5">#DD1E1E</color>
+    <color name="gradient_3">#448EFF</color>
+    <color name="gradient_6">#FF03E9</color>
 </resources>
