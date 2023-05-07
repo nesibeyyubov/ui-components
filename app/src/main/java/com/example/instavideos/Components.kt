@@ -4,6 +4,7 @@ val components = listOf(
     Component("Animated gradient border", R.id.animatedGradientBorderFragment),
     Component("Horizontally moving chips", R.id.horizontalMovingChipsFragment),
     Component("Like Button Animation", R.id.likeButtonAnimationFragment),
+    Component("Circular menu with animation", R.id.circularMenuFragment),
 )
 
 data class Component(

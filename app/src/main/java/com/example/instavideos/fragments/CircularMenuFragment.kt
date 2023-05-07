@@ -68,15 +68,14 @@ class CircularMenuFragment : Fragment(R.layout.fragment_circular_menu) {
                         icon.scaleX = 0f
                         icon.scaleY = 0f
                     }
-                    blurs.forEach {
-                        it.isVisible = false
-                    }
                     icons.forEach {
                         it.isEnabled = false
                         it.isClickable = false
                     }
+                    blurs.forEach { it.alpha = 0f }
                     strokeCircle.alpha = 0f
                     arrow.rotation = 0f
+
                     ivArrow.setColorFilter(getColorForIndex(0))
                     resetColors()
 
@@ -94,6 +93,7 @@ class CircularMenuFragment : Fragment(R.layout.fragment_circular_menu) {
                         }
                     )
                 } else {
+                    initClickListeners()
 
                     cardView.animateWidthAndHeight(
                         size = 240.toPx,
@@ -118,6 +118,7 @@ class CircularMenuFragment : Fragment(R.layout.fragment_circular_menu) {
                                 it.isEnabled = true
                                 it.isClickable = true
                             }
+
                             blurs.first().alpha = 0.6f
 
                         }
@@ -127,7 +128,7 @@ class CircularMenuFragment : Fragment(R.layout.fragment_circular_menu) {
 
             }
         }
-        initClickListeners()
+
 
     }
 
@@ -156,29 +157,25 @@ class CircularMenuFragment : Fragment(R.layout.fragment_circular_menu) {
                     .rotation((index * 60).toFloat())
                     .setInterpolator(OvershootInterpolator())
 
+                icons.forEachIndexed { idx, ic ->
+                    ic.setColorFilter(getColor(R.color.gray))
+                }
+                icon.setColorFilter(getColor(R.color.black))
                 animation.setListener(object : AnimatorListener {
                     override fun onAnimationStart(animation: Animator) {}
                     override fun onAnimationEnd(animation: Animator) {
-                        icons.forEachIndexed { idx, ic ->
-                            ic.setColorFilter(getColor(R.color.gray))
-                        }
-                        icon.setColorFilter(getColor(R.color.black))
                         blurs.forEachIndexed { blurIndex, blur ->
                             blur.alpha = 0f
                         }
                         blurs[index].animate()
                             .alpha(0.6f)
                             .start()
-
                         ivArrow.setColorFilter(getColorForIndex(index))
                         strokeCircle.setColorFilter(getColorForIndex(index))
-
                     }
 
                     override fun onAnimationCancel(animation: Animator) {}
-
                     override fun onAnimationRepeat(animation: Animator) {}
-
                 })
                 animation.start()
 
