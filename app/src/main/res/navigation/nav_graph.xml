@@ -30,4 +30,9 @@
         android:name="com.example.instavideos.fragments.CircularMenuFragment"
         android:label="CircularMenuFragment"
         tools:layout="@layout/fragment_circular_menu" />
+    <fragment
+        android:id="@+id/downloadButtonFragment"
+        android:name="com.example.instavideos.fragments.DownloadButtonFragment"
+        android:label="fragment_download_button"
+        tools:layout="@layout/fragment_download_button" />
 </navigation>

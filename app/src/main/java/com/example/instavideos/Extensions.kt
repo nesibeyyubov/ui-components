@@ -41,6 +41,43 @@ fun ViewPropertyAnimator.onAnimationFinished(callback: () -> Unit) {
     })
 }
 
+fun View.animateHeight(
+    height: Int,
+    duration: Long = 0,
+    interpolator: Interpolator? = null,
+    startDelay: Long = 0,
+    onFinish: (() -> Unit)? = null,
+) {
+
+    val animator = ValueAnimator
+        .ofInt(0, height)
+        .setDuration(duration)
+
+    animator.startDelay = startDelay
+
+    animator.addUpdateListener { animation1: ValueAnimator ->
+        val value = animation1.animatedValue as Int
+        this.layoutParams.height = value
+        Log.d("mytag", "animateHeight: ${animation1.currentPlayTime}, $value")
+        this.requestLayout()
+    }
+
+    animator.addListener(object : Animator.AnimatorListener {
+        override fun onAnimationStart(animation: Animator) {}
+        override fun onAnimationEnd(animation: Animator) {
+            onFinish?.invoke()
+        }
+
+        override fun onAnimationCancel(animation: Animator) {}
+        override fun onAnimationRepeat(animation: Animator) {}
+
+    })
+
+    animator.interpolator = interpolator
+    animator.start()
+}
+
+
 fun View.animateWidthAndHeight(
     size: Int,
     duration: Long = 0,
