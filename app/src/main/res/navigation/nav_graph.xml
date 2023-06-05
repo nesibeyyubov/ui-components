@@ -35,4 +35,9 @@
         android:name="com.example.instavideos.fragments.DownloadButtonFragment"
         android:label="fragment_download_button"
         tools:layout="@layout/fragment_download_button" />
+    <fragment
+        android:id="@+id/toggleSwitchButtonFragment"
+        android:name="com.example.instavideos.fragments.ToggleSwitchButtonFragment"
+        android:label="ToggleSwitchButtonFragment"
+        tools:layout="@layout/fragment_toggle_switch_button" />
 </navigation>
