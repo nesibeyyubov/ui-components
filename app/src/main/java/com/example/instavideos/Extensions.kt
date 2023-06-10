@@ -41,6 +41,44 @@ fun ViewPropertyAnimator.onAnimationFinished(callback: () -> Unit) {
     })
 }
 
+fun View.animateWidth(
+    widthFrom: Int = 0,
+    widthTo: Int,
+    duration: Long = 0,
+    interpolator: Interpolator? = null,
+    startDelay: Long = 0,
+    onFinish: (() -> Unit)? = null,
+) {
+
+    Log.d("mytag", "animateWidth: ${widthFrom} - ${widthTo}")
+
+    val animator = ValueAnimator
+        .ofInt(widthFrom, widthTo)
+        .setDuration(duration)
+
+    animator.startDelay = startDelay
+
+    animator.addUpdateListener { animation1: ValueAnimator ->
+        val value = animation1.animatedValue as Int
+        this.layoutParams.width = value
+        this.requestLayout()
+    }
+
+    animator.addListener(object : Animator.AnimatorListener {
+        override fun onAnimationStart(animation: Animator) {}
+        override fun onAnimationEnd(animation: Animator) {
+            onFinish?.invoke()
+        }
+
+        override fun onAnimationCancel(animation: Animator) {}
+        override fun onAnimationRepeat(animation: Animator) {}
+
+    })
+
+    animator.interpolator = interpolator
+    animator.start()
+}
+
 fun View.animateHeight(
     height: Int,
     duration: Long = 0,
