@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_animated_btn"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/rounded_order_btn_bg">
+
+        <View
+            android:id="@+id/view_dash"
+            android:layout_width="3700dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dashed_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_box"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/packet"
+            android:translationX="-25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_truck_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationX="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:id="@+id/view_door_top"
+                android:layout_width="18dp"
+                android:layout_height="2dp"
+                android:layout_marginEnd="-5dp"
+                android:background="@color/white"
+                android:rotation="-90"
+                android:transformPivotX="18dp"
+                android:transformPivotY="2dp"
+                android:translationY="22dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@id/iv_truck"
+                app:layout_constraintTop_toTopOf="@id/iv_truck" />
+
+            <View
+                android:id="@+id/view_door_bottom"
+                android:layout_width="18dp"
+                android:layout_height="2dp"
+                android:layout_marginEnd="-5dp"
+                android:background="@color/white"
+                android:rotation="90"
+                android:transformPivotX="18dp"
+                android:transformPivotY="2dp"
+                android:translationY="-22dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@id/iv_truck"
+                app:layout_constraintEnd_toStartOf="@id/iv_truck" />
+
+            <ImageView
+                android:id="@+id/iv_truck"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/truck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="tv_confirm_order,iv_done"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_confirm_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="Confirm Order"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+
+        <ImageView
+            android:id="@+id/iv_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:src="@drawable/ic_done"
+            android:visibility="gone"
+            app:tint="@color/white" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

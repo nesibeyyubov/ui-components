@@ -7,6 +7,7 @@ val components = listOf(
     Component("Circular menu with animation", R.id.circularMenuFragment),
     Component("Download button animation", R.id.downloadButtonFragment),
     Component("Toggle button", R.id.toggleSwitchButtonFragment),
+    Component("Order button", R.id.orderButtonAnimationFragment),
 )
 
 data class Component(

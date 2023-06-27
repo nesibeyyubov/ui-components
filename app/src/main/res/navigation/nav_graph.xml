@@ -40,4 +40,9 @@
         android:name="com.example.instavideos.fragments.ToggleSwitchButtonFragment"
         android:label="ToggleSwitchButtonFragment"
         tools:layout="@layout/fragment_toggle_switch_button" />
+    <fragment
+        android:id="@+id/orderButtonAnimationFragment"
+        android:name="com.example.instavideos.fragments.OrderButtonAnimationFragment"
+        android:label="OrderButtonAnimationFragment"
+        tools:layout="@layout/fragment_order_button_animation" />
 </navigation>
