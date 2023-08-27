@@ -45,4 +45,9 @@
         android:name="com.example.instavideos.fragments.OrderButtonAnimationFragment"
         android:label="OrderButtonAnimationFragment"
         tools:layout="@layout/fragment_order_button_animation" />
+    <fragment
+        android:id="@+id/fingerprintFragment"
+        android:name="com.example.instavideos.fragments.FingerprintFragment"
+        android:label="FingerprintFragment"
+        tools:layout="@layout/fragment_fingerprint" />
 </navigation>

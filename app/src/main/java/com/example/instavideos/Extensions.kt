@@ -25,8 +25,9 @@ val Int.toPx get() = (this * Resources.getSystem().displayMetrics.density).toInt
 
 val Int.toDp get() = (this / Resources.getSystem().displayMetrics.density).toInt()
 
-fun ImageView.setTint(color: Int) {
-    this.imageTintList = ColorStateList.valueOf(this.context.getColorContext(R.color.black))
+fun ImageView.setTint(color: Int? = null) {
+    this.imageTintList =
+        ColorStateList.valueOf(this.context.getColorContext(color ?: R.color.black))
 }
 
 fun ViewPropertyAnimator.onAnimationFinished(callback: () -> Unit) {

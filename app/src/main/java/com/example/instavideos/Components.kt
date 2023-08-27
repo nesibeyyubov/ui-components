@@ -8,6 +8,7 @@ val components = listOf(
     Component("Download button animation", R.id.downloadButtonFragment),
     Component("Toggle button", R.id.toggleSwitchButtonFragment),
     Component("Order button", R.id.orderButtonAnimationFragment),
+    Component("Fingerprint", R.id.fingerprintFragment),
 )
 
 data class Component(
