@@ -50,4 +50,9 @@
         android:name="com.example.instavideos.fragments.FingerprintFragment"
         android:label="FingerprintFragment"
         tools:layout="@layout/fragment_fingerprint" />
+    <fragment
+        android:id="@+id/threeDImagesFragment"
+        tools:layout="@layout/fragment_three_d_images"
+        android:name="com.example.instavideos.fragments.ThreeDImagesFragment"
+        android:label="ThreeDImagesFragment" />
 </navigation>

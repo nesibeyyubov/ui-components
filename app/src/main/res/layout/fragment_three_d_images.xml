@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <View
+        android:id="@+id/view_1"
+        android:layout_width="@dimen/three_d_card_width"
+        android:layout_height="@dimen/three_d_card_height"
+        android:layout_gravity="center"
+        android:background="@color/gradient_2"
+        android:rotationY="-10"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        android:translationX="75dp" />
+
+    <View
+        android:id="@+id/view_2"
+        android:layout_width="@dimen/three_d_card_width"
+        android:layout_height="@dimen/three_d_card_height"
+        android:layout_gravity="center"
+        android:background="@color/gradient_1"
+        android:rotationY="-10"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:translationX="45dp" />
+
+    <View
+        android:id="@+id/view_3"
+        android:layout_width="@dimen/three_d_card_width"
+        android:layout_height="@dimen/three_d_card_height"
+        android:layout_gravity="center"
+        android:background="@color/gradient_5"
+        android:rotationY="-10"
+        android:scaleX="0.9"
+        android:scaleY="0.9"
+        android:translationX="15dp" />
+
+    <View
+        android:id="@+id/view_4"
+        android:layout_width="@dimen/three_d_card_width"
+        android:layout_height="@dimen/three_d_card_height"
+        android:layout_gravity="center"
+        android:background="@color/gradient_color_2"
+        android:rotationY="-10"
+        android:translationX="-15dp" />
+
+</FrameLayout>
