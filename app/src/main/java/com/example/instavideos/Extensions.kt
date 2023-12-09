@@ -23,7 +23,11 @@ fun Context.getColorContext(color: Int) = ContextCompat.getColor(this, color)
 
 val Int.toPx get() = (this * Resources.getSystem().displayMetrics.density).toInt()
 
+val Float.toPx get() = (this * Resources.getSystem().displayMetrics.density)
+
 val Int.toDp get() = (this / Resources.getSystem().displayMetrics.density).toInt()
+
+val Float.toDp get() = (this / Resources.getSystem().displayMetrics.density)
 
 fun ImageView.setTint(color: Int? = null) {
     this.imageTintList =

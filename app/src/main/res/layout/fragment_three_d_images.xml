@@ -6,46 +6,62 @@
     android:background="@color/white">
 
 
-    <View
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/view_1"
         android:layout_width="@dimen/three_d_card_width"
         android:layout_height="@dimen/three_d_card_height"
         android:layout_gravity="center"
-        android:background="@color/gradient_2"
+        android:outlineProvider="none"
         android:rotationY="-10"
+        android:scaleType="centerCrop"
         android:scaleX="0.7"
+        android:background="@color/white"
         android:scaleY="0.7"
-        android:translationX="75dp" />
+        android:src="@drawable/img_1"
+        android:translationX="75dp"
+        app:shapeAppearanceOverlay="@style/RoundedImage" />
 
-    <View
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/view_2"
         android:layout_width="@dimen/three_d_card_width"
         android:layout_height="@dimen/three_d_card_height"
         android:layout_gravity="center"
-        android:background="@color/gradient_1"
+        android:outlineProvider="none"
         android:rotationY="-10"
+        android:scaleType="centerCrop"
         android:scaleX="0.8"
+        android:background="@color/white"
         android:scaleY="0.8"
-        android:translationX="45dp" />
+        android:src="@drawable/img_2"
+        android:translationX="45dp"
+        app:shapeAppearanceOverlay="@style/RoundedImage" />
 
-    <View
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/view_3"
         android:layout_width="@dimen/three_d_card_width"
         android:layout_height="@dimen/three_d_card_height"
         android:layout_gravity="center"
-        android:background="@color/gradient_5"
+        android:outlineProvider="none"
         android:rotationY="-10"
+        android:scaleType="centerCrop"
+        android:background="@color/white"
         android:scaleX="0.9"
         android:scaleY="0.9"
-        android:translationX="15dp" />
+        android:src="@drawable/img_3"
+        android:translationX="15dp"
+        app:shapeAppearanceOverlay="@style/RoundedImage" />
 
-    <View
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/view_4"
         android:layout_width="@dimen/three_d_card_width"
         android:layout_height="@dimen/three_d_card_height"
         android:layout_gravity="center"
-        android:background="@color/gradient_color_2"
+        android:background="@color/white"
+        android:outlineProvider="none"
         android:rotationY="-10"
-        android:translationX="-15dp" />
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_4"
+        android:translationX="-15dp"
+        app:shapeAppearanceOverlay="@style/RoundedImage" />
 
 </FrameLayout>

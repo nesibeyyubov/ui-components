@@ -2,6 +2,6 @@
 <resources>
     <integer name="anim_duration">700</integer>
 
-    <dimen name="three_d_card_width">270dp</dimen>
-    <dimen name="three_d_card_height">180dp</dimen>
+    <dimen name="three_d_card_width">300dp</dimen>
+    <dimen name="three_d_card_height">195dp</dimen>
 </resources>
